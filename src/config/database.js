@@ -2,9 +2,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default {
-
-  //dialect é o tipo de banco de dados. Estou usando mariadb (mesma coisa do mysql)
-  //pra alterar pra mysql basta mudar pra mysql.
   dialect: 'mariadb',
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,

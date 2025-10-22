@@ -29,10 +29,6 @@ export default class User extends Model {
             }
           }
         },
-        permissions_id: {
-          type: Sequelize.INTEGER,
-          defaultValue: 2,
-        },
         password_hash: {
           type: Sequelize.STRING,
           defaultValue: ''
@@ -61,13 +57,7 @@ export default class User extends Model {
     return this
   }
 
-
-  //define a relação one to many com a tabela Atendimento
-  static associate(models) {
-    this.hasMany(models.Atendimento, {
-      foreignKey: 'id_user',
-      sourceKey: 'id', 
-      as: 'atendimentos',
-    })
+  passwordIsValid(password){
+    return bcrypt.compare(password, this.password_hash);
   }
 }
