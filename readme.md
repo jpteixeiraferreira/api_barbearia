@@ -1,6 +1,5 @@
 #### Como executar o projeto
 
-
 ##### No terminal, tendo o node instalado digite:
 
 ```
@@ -21,5 +20,9 @@ TOKEN_EXPIRATION = 1d
 ```
 
 ##### Para executar o projeto, digite no terminal:
+
+```
+npm run dev
+```
 
 ##### Feito isso a API estará rodando. Recomendo utilizar o Insomnia ou o Postman para consumir a API e facilitar os testes e o desenvolvimento.
